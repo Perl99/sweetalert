@@ -27,14 +27,14 @@ import {
 
 export type SwalParams = (string|Partial<SwalOptions>)[];
 
-export interface SweetAlert {
+interface SweetAlert {
   (...params: SwalParams): Promise<any>,
   close? (namespace?: string): void,
   getState? (): SwalState,
   setActionValue? (opts: string|ActionOptions): void,
   stopLoading? (): void,
   setDefaults? (opts: object): void,
-};
+}
 
 const swal:SweetAlert = (...args) => {
 
